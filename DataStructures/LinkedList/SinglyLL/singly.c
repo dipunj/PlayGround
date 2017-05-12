@@ -36,6 +36,7 @@ char getChoice(void)
 	printf("\n\t c. Insert a node at a position");
 	printf("\n\t e. Exit the program");
 	printf("\n\nYour preference :: ");
+	
 	char op;
 	scanf("%c", &op);
 	printf("----------------------------------------------\n");
@@ -133,7 +134,16 @@ void singlyLL(void)
 				else
 				{
 					printf("The list is empty, first create one.\n");
-					sleep(3);
+					
+					int i;
+					printf("Continue in...");
+					for (i = 5; i > 0 ; --i)
+					{
+						printf("%d",i);
+						printf("\b");
+						fflush(stdout);
+						sleep(1);
+					}
 				}
 				break;
 			}
@@ -154,6 +164,8 @@ void singlyLL(void)
 		}
 		system("clear");
 		displayList();
+		fflush(stdout);
+		fflush(stdin);
 		choice = getChoice();
 	}
 	printf("Exiting...\n");
